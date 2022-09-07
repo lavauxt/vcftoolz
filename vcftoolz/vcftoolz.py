@@ -737,7 +737,7 @@ def compare(truth_flag, vcf_path_list, exclude_snps, exclude_indels, exclude_var
         make_venn2(position_set_list, "Venn Diagram of Positions", "venn2.positions.pdf")
 
     if num_vcf_files >= 3 and num_vcf_files <= 6:
-        import venn
+        from pyvenn import venn
 
         name_colors = ["black" for i in range(num_vcf_files)]
         figsize = (5, 8)
