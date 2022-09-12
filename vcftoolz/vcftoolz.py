@@ -935,7 +935,8 @@ def count(vcf_path, exclude_snps, exclude_indels, exclude_vars, exclude_refs, ex
             filtered_count += 1
 
             # There might be multiple filter reasons per call
-            filters = filt.split(';')
+            for f in filt:
+                filters = filt.split(';')
             for filter in filters:
                 filtered_reason_counts[filter] += 1
 
